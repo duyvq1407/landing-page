@@ -22,3 +22,23 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@mixin button_navigation {
+    background: #fff3f5;
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+    border-radius: 6px;
+    color: $red;
+    padding: 5px 10px;
+    transition: 500ms ease-in-out;
+
+    &:first-child {
+        margin-right: 20px;
+    }
+
+    &:hover {
+        color: #ffffff;
+        background: #e71d36;
+        box-shadow: 0px 4px 6px rgba(231, 29, 54, 0.2);
+        border-radius: 6px;
+    }
+}
