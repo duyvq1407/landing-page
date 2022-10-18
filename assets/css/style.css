@@ -459,6 +459,9 @@ p {
   position: relative;
   padding: 0px 10px;
 }
+.case-study .case-study_right-content .customers .customer img {
+  width: 100%;
+}
 .case-study .case-study_right-content .customers .customer:hover img {
   cursor: pointer;
   opacity: 0.8;
@@ -473,7 +476,7 @@ p {
   width: 90%;
   padding: 0 10px;
   font-size: 12px;
-  bottom: 10px;
+  bottom: 15px;
   color: #ffffff;
   position: absolute;
 }
@@ -520,19 +523,6 @@ p {
   }
   .case-study .case-study_right-content {
     max-width: 100%;
-    justify-content: start;
-  }
-  .case-study .case-study_right-content .customers {
-    justify-content: start;
-    flex-wrap: wrap;
-  }
-  .case-study .case-study_right-content .customers .customer {
-    margin: 10px;
-  }
-  .case-study .case-study_right-content .customers-button {
-    justify-content: start;
-    margin-top: 20px;
-    margin-left: 10px;
   }
 }
 

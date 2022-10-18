@@ -21,7 +21,18 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+        />
         <title>Landing Page</title>
     </head>
 
@@ -205,14 +216,14 @@
                     </div>
                     <div class="case-study_right-content">
                         <div class="customers-button">
-                            <button class="prev-btn">
+                            <button class="case_study-prev-btn slick-arrow">
                                 <i class="fa-solid fa-arrow-left text-[15px]"></i>
                             </button>
-                            <button class="next-btn">
+                            <button class="case_study-next-btn slick-arrow">
                                 <i class="fa-solid fa-arrow-right text-[15px]"></i>
                             </button>
                         </div>
-                        <div class="customers">
+                        <div class="customers slick slick-reponsive">
                             <div class="customer">
                                 <img src="./assets/images/customer/wilson.png" alt="" />
                                 <div class="customer-content">
@@ -247,6 +258,26 @@
                                 <img src="./assets/images/customer/steward.png" alt="" />
                                 <div class="customer-content">
                                     <p>Darrell Steward</p>
+                                    <div class="customer-rate">
+                                        <i class="fa-solid fa-star text-xs mr-3"></i>
+                                        5.0
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <img src="./assets/images/customer/wilson.png" alt="" />
+                                <div class="customer-content">
+                                    <p>Jenny Wilson</p>
+                                    <div class="customer-rate">
+                                        <i class="fa-solid fa-star text-xs mr-3"></i>
+                                        4.7
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <img src="./assets/images/customer/cooper.png" alt="" />
+                                <div class="customer-content">
+                                    <p>Jane Cooper</p>
                                     <div class="customer-rate">
                                         <i class="fa-solid fa-star text-xs mr-3"></i>
                                         5.0
@@ -513,6 +544,12 @@
             ></div>
         </div>
 
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script
+            type="text/javascript"
+            src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        ></script>
         <script src="./assets/js/index.js"></script>
     </body>
 </html>
