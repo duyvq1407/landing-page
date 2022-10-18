@@ -57,6 +57,17 @@ p {
 .header_wrapper {
     width: 100%;
     background: linear-gradient(90deg, #ffe6e6 0%, #f5fffe 26.81%, #fcf3ff 54.58%, #fff4e6 99.86%);
+
+    @include mobile {
+        .maskgroup {
+            display: none;
+        }
+    }
+    @include tablet {
+        .maskgroup {
+            display: none;
+        }
+    }
 }
 
 .header-content {
@@ -157,25 +168,40 @@ p {
         @include flex_center();
         align-items: flex-end;
 
-        @include desktop {
-            padding: 0 10%;
-            top: 100px;
-            margin-top: 100px;
+        .btn_getstart {
+            @include button();
+            background-color: $red;
+            margin-right: 25px;
+        }
+        padding: 0 10%;
+        margin-top: 120px;
 
-            .left-content {
-                margin: 5% 0;
-                .btn_getstart {
-                    @include button();
-                    background-color: $red;
-                    margin-right: 25px;
-                }
-            }
+        .left-content {
+            margin: 5% 0;
+            max-width: 50%;
         }
 
+        h2 {
+            font-size: 6.5rem;
+        }
+        h3 {
+            font-size: 2.6rem;
+        }
         @include tablet {
             padding: 0 5%;
             top: 50px;
             margin-top: 80px;
+
+            .left-content {
+                max-width: 60%;
+                h2 {
+                    font-size: 4rem;
+                }
+                h3 {
+                    font-size: 2rem;
+                    padding: 8px 0;
+                }
+            }
         }
 
         @include mobile {
@@ -187,6 +213,7 @@ p {
             }
 
             .left-content {
+                max-width: 100%;
                 margin-bottom: 20px;
                 display: flex;
                 flex-direction: column;
@@ -264,9 +291,15 @@ p {
             }
         }
 
+        @include tablet {
+            .featured-title {
+                font-size: 4rem;
+            }
+        }
+
         @include mobile {
             .featured-title {
-                font-size: 3rem !important;
+                font-size: 3.5rem !important;
             }
             .logo-branch {
                 @include flex_center();
@@ -358,6 +391,45 @@ p {
             }
         }
 
+        @include tablet {
+            .left-main-services-content {
+                margin-bottom: 50px;
+                h2 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    font-size: 1.8rem;
+                }
+
+                ul li {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .right-main-services-content {
+                .lead-group {
+                    &:first-child {
+                        margin-right: 20px;
+                    }
+                    .lead-item {
+                        margin-bottom: 20px;
+                        h3 {
+                            font-size: 2.5rem;
+                        }
+                        p,
+                        a {
+                            letter-spacing: 0;
+                            font-size: 1.6rem;
+                        }
+                        img {
+                            max-width: 80px;
+                        }
+                    }
+                }
+            }
+        }
+
         @include mobile {
             display: block;
 
@@ -420,7 +492,18 @@ p {
         }
     }
 
+    @include tablet {
+        h2 {
+            font-size: 4rem;
+            margin-bottom: 0;
+        }
+    }
+
     @include mobile {
+        h2 {
+            font-size: 3.5rem;
+            margin-bottom: 0;
+        }
         .tab-links {
             max-width: 100%;
             width: 80%;
@@ -510,11 +593,22 @@ p {
         }
     }
 
+    @include tablet {
+        .case-study_left-content {
+            .case-study_title {
+                font-size: 3rem;
+            }
+        }
+    }
+
     @include mobile {
         flex-direction: column;
 
         .case-study_left-content {
             max-width: 100%;
+            .case-study_title {
+                font-size: 3.5rem;
+            }
         }
 
         .case-study_right-content {
@@ -557,6 +651,8 @@ p {
 
         img {
             margin-right: 20px;
+            border-bottom: 5px solid #e71d36;
+            border-radius: 21px;
         }
 
         a {
@@ -572,9 +668,40 @@ p {
         a {
             color: #2ec4b6;
         }
+        img {
+            border-bottom: 5px solid #2ec4b6 !important;
+        }
+    }
+
+    @include tablet {
+        h2 {
+            font-size: 4rem;
+        }
+        .blogs-group-card {
+            .blogs-card {
+                img {
+                    max-width: 35%;
+                }
+
+                .blogs-card-title {
+                    font-size: 2rem;
+                    width: 90%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+
+                .blog-card-description {
+                    font-size: 1.6rem;
+                }
+            }
+        }
     }
 
     @include mobile {
+        h2 {
+            font-size: 3.5rem;
+        }
         .blogs-group-card {
             flex-direction: column;
             .blogs-card {
@@ -638,10 +765,55 @@ p {
 
             .footer-nav {
                 max-width: 40%;
+                ul li {
+                    &:hover {
+                        color: #2ec4b6;
+                        transition: 300ms;
+                    }
+                }
             }
             .footer-news {
                 max-width: 60%;
             }
+        }
+    }
+
+    @include tablet {
+        .footer-content-main {
+            flex-direction: column;
+            .left-content {
+                max-width: 100%;
+            }
+        }
+        .right-content {
+            max-width: 100% !important;
+
+            .footer-nav {
+                max-width: 40% !important;
+                margin-right: 70px;
+                h2 {
+                    margin: 40px 0 10px;
+                    color: #333;
+                }
+
+                ul {
+                    li {
+                        padding: 0 48px 14px 0;
+                    }
+                }
+            }
+
+            .footer-news {
+                max-width: 90% !important;
+                h2 {
+                    margin: 40px 0 20px;
+                    color: #333;
+                }
+            }
+        }
+        .footer-bottom {
+            flex-direction: column;
+            font-size: 1.8rem;
         }
     }
 
@@ -669,11 +841,6 @@ p {
                         li {
                             padding: 0 48px 20px 0;
                             min-width: 50%;
-
-                            &:hover {
-                                color: #2ec4b6;
-                                transition: 300ms;
-                            }
                         }
                     }
                 }
@@ -705,7 +872,7 @@ p {
 
 @media (max-width: 1200px) {
     html {
-        font-size: 50%;
+        font-size: 50% !important;
     }
 }
 
