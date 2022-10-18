@@ -9,10 +9,8 @@
 }
 
 *::-webkit-scrollbar-thumb {
+    border-radius: 20px;
     background-color: #736f6f;
-}
-*::-webkit-resizer {
-    width: 4px;
 }
 
 .scrolling {
@@ -184,8 +182,15 @@ p {
             padding: 0 5%;
             margin-top: 100px;
 
+            .right-content {
+                display: none;
+            }
+
             .left-content {
                 margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 h2 {
                     font-size: 3.5rem;
                 }
@@ -197,6 +202,7 @@ p {
                 }
 
                 p {
+                    text-align: center;
                     font-size: 1.5rem;
                     // display: none;
                 }
@@ -416,8 +422,22 @@ p {
 
     @include mobile {
         .tab-links {
-            width: 100%;
-            padding: 0 20px;
+            max-width: 100%;
+            width: 80%;
+            padding: 0;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                display: block !important;
+                width: 1px !important;
+                // display: none;
+            }
+
+            .tab-link {
+                // min-width: 35%;
+                margin-right: 5%;
+                white-space: nowrap;
+            }
         }
 
         .tab-content {

@@ -6,11 +6,8 @@
 }
 
 *::-webkit-scrollbar-thumb {
+  border-radius: 20px;
   background-color: #736f6f;
-}
-
-*::-webkit-resizer {
-  width: 4px;
 }
 
 .scrolling {
@@ -202,8 +199,14 @@ p {
     padding: 0 5%;
     margin-top: 100px;
   }
+  .header-content .introduction .right-content {
+    display: none;
+  }
   .header-content .introduction .left-content {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .header-content .introduction .left-content h2 {
     font-size: 3.5rem;
@@ -214,6 +217,7 @@ p {
     padding: 5px 0;
   }
   .header-content .introduction .left-content p {
+    text-align: center;
     font-size: 1.5rem;
   }
   .header-content .introduction .left-content div.button {
@@ -415,8 +419,18 @@ p {
 }
 @media (max-width: 767px) {
   .portfolio .tab-links {
-    width: 100%;
-    padding: 0 20px;
+    max-width: 100%;
+    width: 80%;
+    padding: 0;
+    overflow-y: scroll;
+  }
+  .portfolio .tab-links::-webkit-scrollbar {
+    display: block !important;
+    width: 1px !important;
+  }
+  .portfolio .tab-links .tab-link {
+    margin-right: 5%;
+    white-space: nowrap;
   }
   .portfolio .tab-content img {
     max-width: 48%;
