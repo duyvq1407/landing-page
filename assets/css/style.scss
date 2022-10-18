@@ -13,14 +13,6 @@
     background-color: #736f6f;
 }
 
-.scrolling {
-    &::-webkit-scrollbar {
-        width: 0;
-    }
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +20,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-family: 'Inter', sans-serif !important;
     @include desktop {
         font-size: 62.5%;
@@ -489,6 +482,10 @@ p {
     .tab-content {
         img {
             max-width: 32%;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
 
