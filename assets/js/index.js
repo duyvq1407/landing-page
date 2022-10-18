@@ -32,6 +32,16 @@ function throttled(callback, delay = 0) {
     };
 }
 
+function onActiveNavLink(e) {
+    var navLink = document.getElementsByClassName('nav_link');
+    for (let i = 0; i < navLink.length; i++) {
+        navLink[i].className = navLink[i].className.replace(' active', '');
+    }
+    if (e) {
+        e.currentTarget.className += ' active';
+    }
+}
+
 function openTab(e, tabId) {
     var tabContent = document.getElementsByClassName('tab-content');
     for (let i = 0; i < tabContent.length; i++) {

@@ -45,7 +45,9 @@
                 />
                 <div class="header-content">
                     <nav class="menu_navbar" id="main-nav">
-                        <a href="#home"><div class="logo">DeMo.</div></a>
+                        <a href="#home" onclick="onActiveNavLink()">
+                            <div class="logo">DeMo.</div>
+                        </a>
                         <div id="navbar" class="navbar flex items-center cursor-pointer">
                             <i
                                 onclick="openNavbar()"
@@ -53,19 +55,19 @@
                                 class="relative left-[52%] top-[-40px] z-200 hidden fa-solid fa-xmark text-[24px]"
                             ></i>
                             <ul>
-                                <li>
+                                <li class="nav_link" onclick="onActiveNavLink(event)">
                                     <a href="#services">Services</a>
                                 </li>
-                                <li>
+                                <li class="nav_link" onclick="onActiveNavLink(event)">
                                     <a href="#packages">Packages</a>
                                 </li>
-                                <li>
+                                <li class="nav_link" onclick="onActiveNavLink(event)">
                                     <a href="#portfolio">Who We Are</a>
                                 </li>
-                                <li>
+                                <li class="nav_link" onclick="onActiveNavLink(event)">
                                     <a href="#portfolio">Our Protfolio</a>
                                 </li>
-                                <li>
+                                <li class="nav_link" onclick="onActiveNavLink(event)">
                                     <a href="#about">About Us</a>
                                 </li>
                             </ul>
