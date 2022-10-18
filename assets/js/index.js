@@ -2,7 +2,6 @@ const mainNav = document.querySelector('#main-nav');
 const navbar = document.getElementById('navbar');
 const closeBtn = document.getElementById('close_menu-btn');
 const openBtn = document.getElementById('open_menu-btn');
-const layoutBlur = document.getElementById('layout-blur');
 // set bg for navbar when scroll
 
 window.onscroll = () => {
@@ -60,13 +59,11 @@ function openNavbar() {
     if (navbar.style.right === '0px') {
         navbar.style.right = '-500px';
         openBtn.style.display = 'block';
-        layoutBlur.style.display = 'none';
-        closeBtn.style.display = 'none';
+        closeBtn.style.right = '-500px';
     } else {
         navbar.style.right = 0;
         openBtn.style.display = 'none';
-        layoutBlur.style.display = 'block';
-        closeBtn.style.display = 'block';
+        closeBtn.style.right = '5%';
     }
 }
 
