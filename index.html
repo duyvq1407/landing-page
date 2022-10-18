@@ -26,59 +26,70 @@
     </head>
 
     <body>
-        <div class="container mx-auto">
+        <div class="flex flex-wrap">
             <header class="header_wrapper" id="home">
-                <img src="./assets/images/Maskgroup.svg" height="800" />
-                <nav class="menu_navbar" id="main-nav">
-                    <a href="#home"><div class="logo">DeMo.</div></a>
-                    <div class="navbar flex items-center">
-                        <ul>
-                            <li class="active">
-                                <a href="#services">Services</a>
-                            </li>
-                            <li>
-                                <a href="#">Packages</a>
-                            </li>
-                            <li>
-                                <a href="#">Who We Are</a>
-                            </li>
-                            <li>
-                                <a href="#portfolio">Our Protfolio</a>
-                            </li>
-                            <li>
-                                <a href="#">About Us</a>
-                            </li>
-                        </ul>
-                        <a href="#contacts" class="contacts-btn">Contacts</a>
-                    </div>
-                </nav>
-
-                <div class="introduction">
-                    <div class="left-content">
-                        <h2 class="text-[6.5rem] leading-[135%] uppercase font-bold">
-                            BEST
-                            <span class="text-[#e71d36]">MARKETING</span>
-                            COMPANY.
-                        </h2>
-                        <h3 class="text-[2.6rem] leading-8 py-12 font-semibold">
-                            #1 MARKETING Services Agency in USA & UK
-                        </h3>
-                        <p>
-                            If you're looking for the best SEO company for your business,
-                            PageTraffic is the perfect choice.
-                        </p>
-                        <div class="button flex items-center mt-16">
-                            <a href="#" class="btn_getstart">Get start</a>
-                            <a
-                                href="#"
-                                class="flex items-center text-[#E71D36] underline text-[2rem]"
-                                ><img src="./assets/images/icon-1.svg" class="mr-4" /> Watch
-                                Video</a
-                            >
+                <div class="header-content">
+                    <!-- <img src="./assets/images/Maskgroup.svg" class="absolute top-[-90px]" /> -->
+                    <nav class="menu_navbar" id="main-nav">
+                        <a href="#home"><div class="logo">DeMo.</div></a>
+                        <div id="navbar" class="navbar flex items-center cursor-pointer">
+                            <i
+                                onclick="openNavbar()"
+                                id="close_menu-btn"
+                                class="relative left-[52%] top-[-40px] z-200 hidden fa-solid fa-xmark text-[24px]"
+                            ></i>
+                            <ul>
+                                <li>
+                                    <a href="#services">Services</a>
+                                </li>
+                                <li>
+                                    <a href="#">Packages</a>
+                                </li>
+                                <li>
+                                    <a href="#">Who We Are</a>
+                                </li>
+                                <li>
+                                    <a href="#portfolio">Our Protfolio</a>
+                                </li>
+                                <li>
+                                    <a href="#">About Us</a>
+                                </li>
+                            </ul>
+                            <a href="#contacts" class="contacts-btn">Contacts</a>
                         </div>
-                    </div>
-                    <div class="right-content">
-                        <img src="./assets/images/image.png" alt="" />
+                        <button class="menu-toggle hidden" onclick="openNavbar()">
+                            <i id="open_menu-btn" class="fa-solid fa-bars text-[24px]"></i>
+                        </button>
+                    </nav>
+
+                    <div class="introduction">
+                        <div class="left-content">
+                            <h2 class="text-[6.5rem] leading-[135%] uppercase font-bold">
+                                BEST
+                                <span class="text-[#e71d36]">MARKETING</span>
+                                COMPANY.
+                            </h2>
+                            <h3 class="text-[2.6rem] py-12 font-semibold">
+                                #1 MARKETING Services Agency in USA & UK
+                            </h3>
+                            <p>
+                                If you're looking for the best SEO company for your business,
+                                PageTraffic is the perfect choice.
+                            </p>
+                            <div class="button flex items-center mt-16">
+                                <a href="#" class="btn_getstart">Get start</a>
+                                <a
+                                    href="#"
+                                    class="btn_watchvideo flex items-center text-[#E71D36] underline text-[2rem]"
+                                >
+                                    <img src="./assets/images/icon-1.svg" class="mr-4" /> Watch
+                                    Video
+                                </a>
+                            </div>
+                        </div>
+                        <div class="right-content flex items-end justify-end">
+                            <img src="./assets/images/image.png" alt="" />
+                        </div>
                     </div>
                 </div>
             </header>
@@ -86,15 +97,17 @@
             <main class="content">
                 <div id="services" class="services">
                     <div class="featured flex flex-col items-center">
-                        <h2 class="font-bold text-[4.5rem] pb-10 pt-[90px] text-[#011627]">
+                        <h2
+                            class="featured-title font-bold text-[4.5rem] pb-10 pt-[90px] text-[#011627]"
+                        >
                             OUR WORK FEATURED ON
                         </h2>
                         <div class="logo-branch">
-                            <img src="./assets/images/forbe-logo.png" alt="" />
-                            <img src="./assets/images/netflix-logo.png" alt="" />
-                            <img src="./assets/images/amazon-logo.png" alt="" />
-                            <img src="./assets/images/sej-logo.png" alt="" />
-                            <img src="./assets/images/entrepreneur-logo.png" alt="" />
+                            <img src="./assets/images/features/forbe-logo.png" alt="" />
+                            <img src="./assets/images/features/netflix-logo.png" alt="" />
+                            <img src="./assets/images/features/amazon-logo.png" alt="" />
+                            <img src="./assets/images/features/sej-logo.png" alt="" />
+                            <img src="./assets/images/features/entrepreneur-logo.png" alt="" />
                         </div>
                     </div>
 
@@ -103,7 +116,7 @@
                             <h2 class="uppercase text-[3rem] font-medium tracking-wide">
                                 HOW PAGETRAFFIC CREATES HYPER BUSINESS GROWTH
                             </h2>
-                            <p class="py-14 tracking-wider">
+                            <p class="py-14">
                                 PageTraffic offers top-notch SEO and digital marketing solutions to
                                 help you rank high on search results, connect with.
                             </p>
@@ -201,41 +214,41 @@
                         </div>
                         <div class="customers">
                             <div class="customer">
-                                <img src="./assets/images/wilson.png" alt="" />
+                                <img src="./assets/images/customer/wilson.png" alt="" />
                                 <div class="customer-content">
                                     <p>Jenny Wilson</p>
                                     <div class="customer-rate">
-                                        <i class="bi bi-star-fill text-[7px] mr-3"></i>
+                                        <i class="fa-solid fa-star text-xs mr-3"></i>
                                         4.7
                                     </div>
                                 </div>
                             </div>
                             <div class="customer">
-                                <img src="./assets/images/cooper.png" alt="" />
+                                <img src="./assets/images/customer/cooper.png" alt="" />
                                 <div class="customer-content">
                                     <p>Jane Cooper</p>
                                     <div class="customer-rate">
-                                        <i class="bi bi-star-fill text-[7px] mr-3"></i>
+                                        <i class="fa-solid fa-star text-xs mr-3"></i>
                                         5.0
                                     </div>
                                 </div>
                             </div>
                             <div class="customer">
-                                <img src="./assets/images/fisher.png" alt="" />
+                                <img src="./assets/images/customer/fisher.png" alt="" />
                                 <div class="customer-content">
                                     <p>Cody Fisher</p>
                                     <div class="customer-rate">
-                                        <i class="bi bi-star-fill text-[7px] mr-3"></i>
+                                        <i class="fa-solid fa-star text-xs mr-3"></i>
                                         4.9
                                     </div>
                                 </div>
                             </div>
                             <div class="customer">
-                                <img src="./assets/images/steward.png" alt="" />
+                                <img src="./assets/images/customer/steward.png" alt="" />
                                 <div class="customer-content">
                                     <p>Darrell Steward</p>
                                     <div class="customer-rate">
-                                        <i class="bi bi-star-fill text-[7px] mr-3"></i>
+                                        <i class="fa-solid fa-star text-xs mr-3"></i>
                                         5.0
                                     </div>
                                 </div>
@@ -247,7 +260,7 @@
                 <div class="portfolio mt-20 flex flex-col items-center w-full" id="portfolio">
                     <h2 class="text-center text-[4.5rem] mb-20 font-bold">Our Portfolio</h2>
 
-                    <div class="portfolio tab-links flex justify-between items-center w-3/5">
+                    <div class="tab-links flex justify-between items-center w-3/5">
                         <div class="tab-link" onclick="openTab(event,1)">All</div>
                         <div class="tab-link" onclick="openTab(event,2)">Website App</div>
                         <div class="tab-link" onclick="openTab(event,3)">Mobile App</div>
@@ -277,36 +290,12 @@
                             No data
                         </div>
                         <div class="tab-content min-h-[670px] flex flex-wrap justify-between">
-                            <img
-                                src="./assets/images/portfolio/porfolio-6.png"
-                                width="32%"
-                                class="my-8"
-                            />
-                            <img
-                                src="./assets/images/portfolio/porfolio-5.png"
-                                width="32%"
-                                class="my-8"
-                            />
-                            <img
-                                src="./assets/images/portfolio/porfolio-4.png"
-                                width="32%"
-                                class="my-8"
-                            />
-                            <img
-                                src="./assets/images/portfolio/porfolio-2.png"
-                                width="32%"
-                                class="my-8"
-                            />
-                            <img
-                                src="./assets/images/portfolio/porfolio-3.png"
-                                width="32%"
-                                class="my-8"
-                            />
-                            <img
-                                src="./assets/images/portfolio/porfolio-1.png"
-                                width="32%"
-                                class="my-8"
-                            />
+                            <img src="./assets/images/portfolio/porfolio-6.png" class="my-8" />
+                            <img src="./assets/images/portfolio/porfolio-5.png" class="my-8" />
+                            <img src="./assets/images/portfolio/porfolio-4.png" class="my-8" />
+                            <img src="./assets/images/portfolio/porfolio-2.png" class="my-8" />
+                            <img src="./assets/images/portfolio/porfolio-3.png" class="my-8" />
+                            <img src="./assets/images/portfolio/porfolio-1.png" class="my-8" />
                         </div>
                     </div>
                     <div>
@@ -332,8 +321,10 @@
                                     <div class="breadcrumb mb-4 text-[1.2rem]">
                                         19 Feb, 2022/By Admin
                                     </div>
-                                    <h3 class="text-[2.6rem] font-medium">UI/UX design Tips</h3>
-                                    <p class="my-5">
+                                    <h3 class="text-[2.6rem] blogs-card-title font-medium">
+                                        UI/UX design Tips
+                                    </h3>
+                                    <p class="my-5 blog-card-description">
                                         Promotion World has once placed PageTraffic among the top.
                                     </p>
                                     <a href="#" class="text-[#E71D36] hover:opacity-80">
@@ -347,8 +338,10 @@
                                     <div class="breadcrumb mb-4 text-[1.2rem]">
                                         09 Apr, 2022/By Admin
                                     </div>
-                                    <h3 class="text-[2.6rem] font-medium">Improve your UX/UI</h3>
-                                    <p class="my-5">
+                                    <h3 class="blogs-card-title text-[2.6rem] font-medium">
+                                        Improve your UX/UI
+                                    </h3>
+                                    <p class="my-5 blog-card-description">
                                         Promotion World has once placed PageTraffic among the top.
                                     </p>
                                     <a href="#" class="text-[#E71D36] hover:opacity-80">
@@ -362,8 +355,10 @@
                                     <div class="breadcrumb mb-4 text-[1.2rem]">
                                         25 Jon, 2022/By Admin
                                     </div>
-                                    <h3 class="text-[2.6rem] font-medium">Meta Technology.</h3>
-                                    <p class="my-5">
+                                    <h3 class="blogs-card-title text-[2.6rem] font-medium">
+                                        Meta Technology.
+                                    </h3>
+                                    <p class="my-5 blog-card-description">
                                         Promotion World has once placed PageTraffic among the top.
                                     </p>
                                     <a href="#" class="text-[#E71D36] hover:opacity-80">
@@ -377,10 +372,10 @@
                                     <div class="breadcrumb mb-4 text-[1.2rem]">
                                         13 Nov, 2022/By Admin
                                     </div>
-                                    <h3 class="text-[2.6rem] font-medium">
+                                    <h3 class="blogs-card-title text-[2.6rem] font-medium">
                                         PageTraffic Rankfa-stack
                                     </h3>
-                                    <p class="my-5">
+                                    <p class="my-5 blog-card-description">
                                         Promotion World has once placed PageTraffic among the top.
                                     </p>
                                     <a href="#" class="text-[#E71D36] hover:opacity-80">
@@ -427,21 +422,19 @@
                                     company
                                 </h2>
                                 <ul>
-                                    <a>
-                                        <li class="cursor-pointer">About</li>
-                                    </a>
-                                    <a>
-                                        <li class="cursor-pointer">Services</li>
-                                    </a>
-                                    <a>
-                                        <li class="cursor-pointer">Press</li>
-                                    </a>
-                                    <a>
-                                        <li class="cursor-pointer">Resources</li>
-                                    </a>
-                                    <a>
-                                        <li class="cursor-pointer">Blog</li>
-                                    </a>
+                                    <li class="cursor-pointer">
+                                        <a>About</a>
+                                    </li>
+                                    <li class="cursor-pointer">
+                                        <a>Services</a>
+                                    </li>
+                                    <li class="cursor-pointer"><a>Press</a></li>
+                                    <li class="cursor-pointer">
+                                        <a>Resources</a>
+                                    </li>
+                                    <li class="cursor-pointer">
+                                        <a>Blog</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="footer-news">
@@ -501,7 +494,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="footer-bottom mt-[5rem] flex justify-between items-center">
+                    <div
+                        class="footer-bottom text-12px sm:text-[14px] xl:text-[18px] mt-[5rem] flex justify-between items-center"
+                    >
                         <p>© 2021 DeMO Insurance Inc. Patent Pending. All Rights Reserved.</p>
                         <p>
                             <a href="#" class="text-[#2EC4B6]">Privacy </a>
@@ -510,6 +505,12 @@
                     </div>
                 </div>
             </footer>
+
+            <div
+                onclick="openNavbar()"
+                id="layout-blur"
+                class="hidden w-screen h-screen z-70 fixed"
+            ></div>
         </div>
 
         <script src="./assets/js/index.js"></script>
