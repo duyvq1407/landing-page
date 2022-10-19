@@ -74,6 +74,27 @@ function openNavbar() {
     }
 }
 
+// SCROLL SECTIONS ACTIVE LINK
+const sections = document.querySelectorAll('div[id]:not(#navbar)');
+
+function scrollActive() {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach((current) => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id');
+        element = document.querySelector('.nav_link:has(a[href*=' + sectionId + '])');
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            element.classList.add('active');
+        } else {
+            element.classList.remove('active');
+        }
+    });
+}
+window.addEventListener('scroll', scrollActive);
+
 //slide show for case study
 $('.slick-reponsive').slick({
     infinite: true,
