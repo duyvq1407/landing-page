@@ -2,8 +2,10 @@ const mainNav = document.querySelector('#main-nav');
 const navbar = document.getElementById('navbar');
 const closeBtn = document.getElementById('close_menu-btn');
 const openBtn = document.getElementById('open_menu-btn');
-// set bg for navbar when scroll
+const scrollTop = document.getElementById('scroll-top');
+const navLink = document.getElementsByClassName('nav_link');
 
+// set bg for navbar when scroll
 window.onscroll = () => {
     scrollFunction();
 };
@@ -14,25 +16,15 @@ window.onload = () => {
 function scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         mainNav.classList.add('navbar-active');
+        scrollTop.style.bottom = '40px';
     } else {
         mainNav.classList.remove('navbar-active');
+        scrollTop.style.bottom = '-160px';
     }
 }
 
-function throttled(callback, delay = 0) {
-    let lastRun = 0;
-    return (...arg) => {
-        const now = new Date().getTime();
-        if (now - lastRun < delay) {
-            return;
-        }
-        lastRun = now;
-        callback(...arg);
-    };
-}
-
+//Set active for nav link
 function onActiveNavLink(e) {
-    var navLink = document.getElementsByClassName('nav_link');
     for (let i = 0; i < navLink.length; i++) {
         navLink[i].className = navLink[i].className.replace(' active', '');
     }
@@ -40,6 +32,21 @@ function onActiveNavLink(e) {
         e.currentTarget.className += ' active';
     }
 }
+
+//hide menu mobile
+function linkAction() {
+    if (window.innerWidth <= 870) {
+        navbar.style.right = '-500px';
+        openBtn.style.display = 'block';
+        closeBtn.style.right = '-500px';
+    }
+}
+
+for (let i = 0; i < navLink.length; i++) {
+    navLink[i].addEventListener('click', linkAction);
+}
+
+//tabs for portfolio
 
 function openTab(e, tabId) {
     var tabContent = document.getElementsByClassName('tab-content');
@@ -67,6 +74,7 @@ function openNavbar() {
     }
 }
 
+//slide show for case study
 $('.slick-reponsive').slick({
     infinite: true,
     speed: 500,

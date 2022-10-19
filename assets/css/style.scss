@@ -40,7 +40,8 @@ body {
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 2;
-    background-color: #fdfffc;
+    background-color: $light-background-color;
+    // background-color: $dark-background-color;
 }
 
 p {
@@ -67,7 +68,7 @@ p {
     position: relative;
 
     .navbar-active {
-        background-color: #fdfffc;
+        background-color: $light-background-color;
         transition: all 300ms ease-in-out;
         box-shadow: 0 2px 42px rgb(0 0 0 / 10%);
         .logo {
@@ -125,7 +126,7 @@ p {
 
                 li {
                     cursor: pointer;
-                    padding: 24px 0;
+                    padding: 20px 0;
                     margin: 0 12px;
                     position: relative;
 
@@ -140,6 +141,10 @@ p {
                         @include menu-nav-active();
                         transition: all 500ms ease-in-out;
                         width: 0%;
+                    }
+
+                    a {
+                        padding: 25px 0;
                     }
                 }
                 li.active {
