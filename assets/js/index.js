@@ -20,7 +20,6 @@ window.onscroll = () => scrollFunction();
 window.onload = () => scrollFunction();
 
 function scrollFunction() {
-    console.log(1);
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         mainNav.classList.add('navbar-active');
         scrollTop.style.bottom = '40px';
